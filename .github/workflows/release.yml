@@ -44,6 +44,7 @@ jobs:
 
       # Trusted publishing: no NODE_AUTH_TOKEN — npm exchanges the OIDC token
       # issued by GitHub for a short-lived publish credential.
+      - run: npm install -g npm@11
       - run: npm publish --access public --provenance
 
       - name: Commit, tag and push
